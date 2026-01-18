@@ -40,8 +40,8 @@ def analyze_r_place_data(start_dt, end_dt, data_file):
     end_time = time.perf_counter_ns()
     elapsed_time = end_time - start_time
     print(f"Elapsed Time: {elapsed_time} ns")
-    print(f"elapsed time: {elapsed_time / 1_000_000} ms")
-    print(f"elapsed time: {elapsed_time / 1_000_000_000} s")
+    print(f"elapsed time: {elapsed_time / 1000000} ms")
+    print(f"elapsed time: {elapsed_time / 1000000000} s")
 
     return
 
