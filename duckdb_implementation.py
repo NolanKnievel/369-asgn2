@@ -5,10 +5,6 @@ import time
 from input import get_input
 
 
-# duckdb.sql("DESCRIBE SELECT * FROM r_place_canvas_history.parquet").show()
-
-
-
 def analyze_r_place_data(start_dt, end_dt, data_file):
 
     print(f"inputs: {start_dt}, {end_dt}, {data_file}")

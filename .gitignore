@@ -1,1 +1,3 @@
 r_place.parquet
+.venv/
+.tmp
