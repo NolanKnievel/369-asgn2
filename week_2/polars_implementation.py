@@ -9,12 +9,12 @@ def analyze_r_place_data(start_dt, end_dt, data_file):
     # start timing
     start_time = time.perf_counter_ns()
 
-    # Read parquet file
+    # read parquet file
     df = polars.scan_parquet(data_file).filter(
         (polars.col("timestamp") >= start_dt) & 
         (polars.col("timestamp") < end_dt))
 
-    # Find most placed color
+    # most placed color
     most_placed_color = (
         df
         .group_by("pixel_color")
@@ -24,7 +24,7 @@ def analyze_r_place_data(start_dt, end_dt, data_file):
         .collect()
     )
     
-    # Find most placed pixel location
+    # most placed pixel location
     most_placed_location = (
         df
         .group_by("coordinate")

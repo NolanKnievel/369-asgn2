@@ -1,3 +1,5 @@
 r_place.parquet
 .venv/
 .tmp
+__pycache__/
+.python-version

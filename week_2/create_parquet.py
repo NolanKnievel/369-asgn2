@@ -6,10 +6,10 @@ duckdb.sql("""
     COPY (SELECT 
         CAST(timestamp AS TIMESTAMP) as timestamp,
         coordinate,
-        CAST(pixel_color AS VARCHAR) as pixel_color,
+        pixel_color,
         user_id
 
- FROM read_csv_auto('../asgn1/2022_place_canvas_history.csv'))
-    TO 'r_place.parquet' (FORMAT PARQUET, COMPRESSION ZSTD);
+ FROM read_csv_auto('../../asgn1/2022_place_canvas_history.csv'))
+    TO 'r_place2.parquet' (FORMAT PARQUET, COMPRESSION ZSTD);
 """)
 
